@@ -1,0 +1,7 @@
+"categoria_errore","descrizione_problema","id_record_problematico"
+"Anagrafica Customer","Country mancante per il cliente: Coastal Imports","10"
+"Anagrafica Carrier","Nome corriere mancante o vuoto","8"
+"Dati Spedizione","Trovati valori negativi/zero (peso, volume o costo)","91"
+"Dati Spedizione","Trovati valori negativi/zero (peso, volume o costo)","182"
+"Dati Spedizione","Trovati valori negativi/zero (peso, volume o costo)","273"
+"Dati Spedizione","Trovati valori negativi/zero (peso, volume o costo)","364"
