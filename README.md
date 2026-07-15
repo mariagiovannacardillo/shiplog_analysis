@@ -48,10 +48,10 @@ Traducendo le regole della logistica in condizioni SQL, ho fatto emergere critic
 **Piano di Risoluzione (Correzione e Prevenzione):**
 * **Fase 1 (Operativa - Data Cleansing):** Isolare i record, recuperare il dato reale con i referenti e utilizzare istruzioni `UPDATE` per correggere lo storico (es. convertire in `ABS()` i pesi negativi e accorpare le anagrafiche duplicate sotto un singolo ID, eliminando le ridondanze con `DELETE`).
 * **Fase 2 (Strutturale - DB Hardening):** Poiché SQLite limita il comando `ALTER TABLE`, l'azione prioritaria è la creazione di una nuova tabella `shipments_new` per travasarvi i dati puliti. La nuova tabella integrerà:
-  * Vincoli `FOREIGN KEY` (`ON DELETE RESTRICT`) per evitare dati orfani.
-  * Vincoli `CHECK (weight_kg > 0)` per bloccare input numerici errati.
-  * Domini chiusi `CHECK (status IN ('Delivered', 'Delayed'...))` per evitare refusi di battitura.
-  * Conversione del tipo `TEXT` in `DATE` per applicare rigidi controlli temporali in fase di inserimento.
+  * Vincoli `FOREIGN KEY` (`ON DELETE RESTRICT`) per evitare dati orfani.
+  * Vincoli `CHECK (weight_kg > 0)` per bloccare input numerici errati.
+  * Domini chiusi `CHECK (status IN ('Delivered', 'Delayed'...))` per evitare refusi di battitura.
+  * Conversione del tipo `TEXT` in `DATE` per applicare rigidi controlli temporali in fase di inserimento.
 Dopo aver travasato i dati puliti, la tabella andrà rinominata per rimetterla in produzione e si potrà a quel punto cancellare la vecchia tabella.
 
 ### 🎯 Domanda 4: La Metrica Strategica da Monitorare
