@@ -1,8 +1,7 @@
 -- =========================================================================================
--- PROGETTO: Esercizio Take-Home Junior Data Analyst - Albini & Pitigliani S.p.A.
+-- PROGETTO: Esercizio Take-Home Junior Data Analyst
 -- OBIETTIVO: Esplorazione DB ShipLog, risposta alle domande guida e data quality check.
 -- RDBMS TARGET: SQLite
--- CANDIDATA: Maria Giovanna Cardillo
 -- =========================================================================================
 
 -- ----------------------------------------------------------
