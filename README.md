@@ -1,7 +1,4 @@
 # ShipLog: Analisi Spedizioni e Data Quality
-**Candidata:** Maria Giovanna Cardillo  
-**Posizione:** Junior Data Analyst - Albini & Pitigliani S.p.A.
-
 ## 1. Metodologia, Strumenti e Approccio
 Questo repository contiene l'esito dell'esplorazione del database `shiplog.db`. L'obiettivo principale è stato non solo rispondere alle domande di business ma, parallelamente, condurre un *Data Quality Audit* per valutare l'affidabilità dell'infrastruttura dati e del dato sottostante.
 
