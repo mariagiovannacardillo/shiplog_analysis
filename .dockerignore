@@ -1,0 +1,7 @@
+.git
+.gitignore
+__pycache__/
+*.pbix
+*.pdf
+master_view_19.csv
+dashboard_dataset.csv
