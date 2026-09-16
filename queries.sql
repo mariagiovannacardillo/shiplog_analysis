@@ -1,5 +1,5 @@
 -- =========================================================================================
--- PROGETTO: Esercizio Take-Home Junior Data Analyst
+-- PROGETTO: Analisi Esplorativa e Data Quality (Database logistico ShipLog)
 -- OBIETTIVO: Esplorazione DB ShipLog, risposta alle domande guida e data quality check.
 -- RDBMS TARGET: SQLite
 -- =========================================================================================
