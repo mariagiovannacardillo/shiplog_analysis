@@ -65,6 +65,32 @@ L'AI mi è stata utile per:
 * **Cosa ho delegato:** La stesura del codice boilerplate in Python (es. il parsing delle date con pandas) per la preparazione del dataset piatto per Power BI, delegando all'AI la stesura sintattica dei calcoli temporali che avevo precedentemente definito in logica SQL e l'impaginazione formattata del Markdown. La stesura e revisione di alcune Query SQL, come per la logica dietro la Master View degli allarmi (Query 19), ottimizzandola con l'uso di `UNION ALL` per ragioni di performance computazionale (escludendo il controllo dei duplicati).
 * **Cosa ho imparato:** Ho compreso che l'AI è un eccellente esecutore sintattico, ma manca totalmente di sensibilità al dominio logistico. La definizione dello SLA teorico, la caccia alle anomalie anagrafiche, la scoperta dei "viaggi nel tempo" e l'architettura di Database Hardening per arginare i limiti di SQLite sono stati concepiti e validati interamente dal mio ragionamento analitico. 
 
+---
+
 ## 4. Alternative Scartate e Sviluppi Futuri
 * **Alternative Scartate:** Inizialmente avevo ipotizzato di unificare i Top Clienti e i Top Carrier in un unico grafico a dispersione. Ho scartato l'idea per evitare "rumore visivo": mischiare "chi paga l'azienda" con "chi viene pagato dall'azienda" avrebbe generato confusione nella lettura manageriale.
 * **Sviluppi Futuri:** Avendo più tempo e un dataset storicizzato, avrei implementato un'analisi della stagionalità anno su anno (YoY) e integrato un campo reale `promised_delivery_date` per misurare i ritardi effettivi tramite dashboard, anziché basarmi su uno SLA teorico. Avrei approfondito ulteriormente l'Analisi dei Costi, studiando ad esempio l'impatto del peso volumetrico rispetto al peso reale e valutando la marginalità delle singole tratte. Avrei inoltre integrato un sistema di alerting automatico collegato alla Master View delle anomalie. 
+
+---
+
+## 5. 🐳 Esecuzione dell'ambiente con Docker
+Per garantire la totale riproducibilità del codice e l'isolamento delle dipendenze, la pipeline di estrazione dati è containerizzata in ambiente Docker.
+
+Per clonare il repository ed eseguire lo script generando i dataset CSV aggiornati:
+
+1. **Clona il repository e accedi alla cartella:**
+   ```bash
+   git clone https://github.com/mariagiovannacardillo/shiplog_analysis.git
+   cd shiplog_analysis
+   ```
+   
+2. **Costruisci l'immagine Docker:**
+   ```bash
+   docker build -t shiplog-analysis .
+   ```
+
+3. **Avvia il container:**
+
+   ```bash
+   docker run --rm shiplog-analysis
+   ```
